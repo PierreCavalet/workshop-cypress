@@ -1,10 +1,10 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/login">Login</router-link> |
-      <router-link to="/signup1">Signup 1</router-link> |
-      <router-link to="/signup2">Signup 2</router-link>
+      <router-link to="/" data-cy="home-link">Home</router-link> |
+      <router-link to="/login" data-cy="login-link">Login</router-link> |
+      <router-link to="/signup1" data-cy="signup1-link">Signup 1</router-link> |
+      <router-link to="/signup2" data-cy="signup2-link">Signup 2</router-link>
     </div>
     <router-view />
   </div>
