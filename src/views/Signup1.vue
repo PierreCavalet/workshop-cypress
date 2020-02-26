@@ -2,9 +2,10 @@
   <div class="about">
     <v-layout>
       <v-flex>
-        <h1>Signup 1</h1>
+        <h1 data-cy="signup-title">Signup 1</h1>
         <v-col cols="12" offset="3" sm="6" md="6">
           <img
+            data-cy="signup1-gif"
             width="100%"
             src="https://media.giphy.com/media/jRlP4zbERYW5HoCLvX/giphy.gif"
             alt="wtf"
@@ -14,18 +15,21 @@
           <br />
           <v-form ref="form" lazy-validation>
             <v-text-field
+              data-cy="firstname-input"
               label="First name"
               solo
               :rules="[v => !!v || 'First name is required']"
             />
 
             <v-text-field
+              data-cy="lastname-input"
               label="Last name"
               solo
               :rules="[v => !!v || 'Last name is required']"
             />
 
             <v-text-field
+              data-cy="email-input"
               label="E-mail"
               solo
               :rules="[
@@ -35,6 +39,7 @@
             />
 
             <v-text-field
+              data-cy="password-input"
               label="Password"
               type="password"
               solo
@@ -44,7 +49,13 @@
               ]"
             />
 
-            <v-btn v-if="!done" large :loading="loading" @click="validate">
+            <v-btn
+              v-if="!done"
+              large
+              :loading="loading"
+              @click="validate"
+              data-cy="submit-button"
+            >
               Register
             </v-btn>
             <template v-else> OK </template>
