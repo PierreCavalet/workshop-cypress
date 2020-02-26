@@ -3,7 +3,7 @@
     <v-layout>
       <v-flex>
         <h1 data-cy="login-title">Login</h1>
-        <v-col cols="12" offset="3" sm="6" md="6">
+        <v-col cols="12" offset-md="3" offset-lg="4" sm="12" md="6" lg="4">
           <img
             data-cy="login-gif"
             width="100%"
